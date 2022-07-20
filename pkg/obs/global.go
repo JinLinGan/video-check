@@ -1,0 +1,43 @@
+package obs
+
+var GlobalConfigTemplate = `
+[Basic]
+Profile=zixun
+ProfileDir=zixun
+SceneCollection=zixun
+SceneCollectionFile=zixun
+
+[General]
+Pre19Defaults=false
+Pre21Defaults=false
+Pre23Defaults=false
+Pre24.1Defaults=false
+LastUpdateCheck=0
+InstallGUID=61eb7069e6e1be48600ec8ddd6b03e2f4f1932b1
+FirstRun=true
+InfoIncrement=10
+LastVersion=453115908
+
+[BasicWindow]
+gridMode=false
+geometry=AdnQywADAAAAAAGNAAAAXQAABcUAAANVAAABjgAAAHwAAAXEAAADVAAAAAAAAAAAB1QAAAGOAAAAfAAABcQAAANU
+DockState=AAAA/wAAAAD9AAAAAQAAAAMAAAQ3AAAApPwBAAAABvsAAAAUAHMAYwBlAG4AZQBzAEQAbwBjAGsBAAAAAAAAALsAAACgAP////sAAAAWAHMAbwB1AHIAYwBlAHMARABvAGMAawEAAAC/AAAAuwAAAKAA////+wAAABIAbQBpAHgAZQByAEQAbwBjAGsBAAABfgAAAXkAAADcAP////sAAAAeAHQAcgBhAG4AcwBpAHQAaQBvAG4AcwBEAG8AYwBrAQAAAvsAAACaAAAAmgD////7AAAAGABjAG8AbgB0AHIAbwBsAHMARABvAGMAawEAAAOZAAAAngAAAJ4A////+wAAABIAcwB0AGEAdABzAEQAbwBjAGsCAAACTQAAAbgAAAK8AAAAyAAABDcAAAIBAAAABAAAAAQAAAAIAAAACPwAAAAA
+ExtraBrowserDocks=[]
+PreviewEnabled=true
+AlwaysOnTop=false
+SceneDuplicationMode=true
+SwapScenesMode=true
+EditPropertiesMode=false
+PreviewProgramMode=false
+DocksLocked=false
+
+[WebsocketAPI]
+AuthSetupPrompted=true
+
+[ScriptLogWindow]
+geometry=AdnQywADAAAAAAAAAAAAFAAAAlcAAAGjAAAAAAAAABQAAAJXAAABowAAAAAAAAAAB1QAAAAAAAAAFAAAAlcAAAGj
+`
+
+func GetGlobalConfigContent() string {
+	return GlobalConfigTemplate
+}
