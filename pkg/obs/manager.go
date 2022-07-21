@@ -43,7 +43,7 @@ type OBSConfig struct {
 	Mic       *VirtualMicInfo
 }
 
-func NewObsManager(source *VideoSource, port uint, password string) *OBSManager {
+func NewObsManager(source *VideoSource, port uint, password string, micName, micID string) *OBSManager {
 	salt := GenerateSalt()
 	return &OBSManager{
 		Source: source,
@@ -54,8 +54,8 @@ func NewObsManager(source *VideoSource, port uint, password string) *OBSManager 
 			Port:     port,
 			Password: password,
 			Mic: NewVirtualMicInfo(
-				"CABLE Input (VB-Audio Virtual Cable)",
-				"{0.0.0.00000000}.{ce4e42b4-c623-41d1-938f-83652535c9d0}"),
+				micName,
+				micID),
 		},
 	}
 }
